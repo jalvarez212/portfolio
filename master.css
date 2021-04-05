@@ -1,0 +1,36 @@
+body {
+    padding: 180px 0 0 40px;
+    background: #101010;
+}
+
+pre {
+    color: #13ed62;
+    font-size: 18px;
+    font-family: monospace;
+    font-weight: bolder;
+    position: absolute;
+    bottom: 0px;
+    left: 5px;
+    padding: 5px;
+    z-index: 1;
+
+}
+
+#tagline {
+    color: #13ed62;
+    font-weight: 100;
+}
+
+#pow-txt {
+    display: none;
+    font-weight: 100;
+    color: #e3e3e3 !important;
+}
+
+
+
+
+
+
+
+

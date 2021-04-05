@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+        <meta charset="utf-8"/>
+        <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@b9ad45a68c42c9ee0e96f62077cf1e43dd0a66fa/dist/aframe-master.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+        <script src="t.min.js"></script>
+        <link rel="stylesheet" href="master.css">
+        <script src="https://npmcdn.com/aframe-animation-component@3.0.1"></script>
+        <script src="https://npmcdn.com/aframe-event-set-component@3.0.1"></script>
+        <script src="https://npmcdn.com/aframe-layout-component@3.0.1"></script>
+        <script src="https://npmcdn.com/aframe-template-component@3.1.1"></script>
+        <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
+    
+  </head>
+  <body>
+
+    <a-scene>
+    
+       <a-assets>
+
+            <a-asset-item id="foo-obj" crossorigin="anonymous" src="https://cdn.glitch.com/62d6d539-d638-4686-ba78-f926cc1d10a8%2FPortal_FInal.obj?1544456633029"></a-asset-item>
+            <a-asset-item id="foo-mtl"  src="assets/models/Portal_FInal2.mtl"></a-asset-item>  
+            <img id="cubes" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/cubes.jpg">
+
+            <img id="cubes-thumb" crossorigin="anonymous" src="https://cdn.glitch.com/61cbfc9c-fc44-4f5d-b843-54bb4dc0886b%2Fblack.png?1545191543261">
+
+
+        <!-- Image link template to be reused. -->
+            <script id="link" type="text/html">
+              <a-entity class="link"
+                geometry="primitive: plane; height: 1; width: 1"
+                material="shader: flat; src: ${thumb}"
+                event-set__1="_event: mousedown; scale: 1 1 1"
+                event-set__2="_event: mouseup; scale: 1.2 1.2 1"
+                event-set__3="_event: mouseenter; scale: 1.2 1.2 1"
+                event-set__4="_event: mouseleave; scale: 1 1 1"
+                set-image="on: click; target: #image-360; src: ${src}"
+                sound="on: click; src: #click-sound";>
+              </a-entity>
+        </script>
+
+      </a-assets>
+      <!--<a-entity gltf-model="#portal" position="3 -3 -11" rotation="0 45 0" scale="0.01 0.01 0.01"></a-entity> -->
+      <a-sky id="image-360" src="https://cdn.glitch.com/62d6d539-d638-4686-ba78-f926cc1d10a8%2Fdesert.jpg?1544456603475"></a-sky>
+
+
+      <a-obj-model class="link" src="#foo-obj" mtl="#foo-mtl" position="6 -3 -11" rotation="0 45 0"
+                  event-set__enter="_event: mouseenter; _target: #image-360; src: https://cdn.aframe.io/360-image-gallery-boilerplate/img/cubes.jpg"
+                  event-set__leave="_event: mouseleave; _target: #image-360; src: https://cdn.glitch.com/62d6d539-d638-4686-ba78-f926cc1d10a8%2Fdesert.jpg?1544456603475"> </a-obj-model>  
+
+<pre id="main"><ins>2.5</ins>
+hello?<ins><span id="pow-txt">---[help_!]</span></ins>
+<span id="tagline">Looks like somehting went wrong in the simulation.<ins>.5</ins><br>Look around with your mouse or device.<ins>.5</ins><br>Just don't get lost,<br>you may not come back</span><del></del><del id="pow-trigger"></del> \\
+</pre>
+
+    <script>
+    
+    $('#main').t({
+ beep:true,
+ caret:'<span style="color:#13ed62;">•</span>',
+ typing:function(elm,chr){
+
+   if(chr.match(/\-trigger/))
+     $('#pow-txt').show().delay(500).fadeOut(0);
+  
+                  }
+                  });
+    
+    </script>
+
+     <!-- Camera + cursor. -->
+      <a-entity position="0 1.6 0" camera look-controls>
+        <a-cursor id="cursor"
+          animation__click="property: scale; startEvents: click; from: 0.1 0.1 0.1; to: 1 1 1; dur: 150;"
+          animation__fusing="property: fusing; startEvents: fusing; from: 1 1 1; to: 0.1 0.1 0.1; dur: 1500"
+          event-set__1="_event: mouseenter; color: #13ed62"
+          event-set__2="_event: mouseleave; color: black"
+          fuse="true"
+          raycaster="objects: .link">
+        </a-cursor>
+      </a-entity>
+
+    </a-scene>
+  </body>
+</html>

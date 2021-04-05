@@ -1,0 +1,496 @@
+
+@media only screen and (max-width: 1400px) {
+  svg#svg-graphic-about, svg#svg-graphic-works, svg#svg-graphic-blog, svg#svg-graphic-contact {
+    width: 500px;
+  }
+
+  .nav-video {
+    width: 494px;
+  }
+
+  .item .client-name {
+    position: absolute;
+    left: 40px;
+    top: 82%;
+    width: 30%
+  }
+
+  .item .project{
+    position: absolute;
+    right: 20px;
+    top: 82%;
+    width: 40%;
+  }
+}
+
+
+@media only screen and (max-width: 1200px) {
+  svg#svg-graphic-about, svg#svg-graphic-works, svg#svg-graphic-blog, svg#svg-graphic-contact {
+    width: 400px;
+  }
+
+  .nav-video {
+    width: 394px;
+  }
+  .circle-1 {
+    position: absolute;
+    right: 0;
+    top: 400px;
+  }
+
+  .circle-2 {
+    position: absolute;
+    right: 400px;
+    top: 100px;
+  }
+
+  .circle-3 {
+    position: absolute;
+    left: 50px;
+    bottom: 60px;
+  }
+
+  .circle-4 {
+    position: absolute;
+    left: 50px;
+    top: 150px;
+  }
+
+  .triangle-1 {
+    position: absolute;
+    right: 200px;
+    bottom: 150px;
+  }
+
+  .triangle-2 {
+    position: absolute;
+    right: 200px;
+    bottom: 50px;
+  }
+
+  .big-text {
+    font-size: 20px;
+    line-height: 1.9em;
+  }
+
+  .case-header .case-title p {
+    font-size: 20px;
+  }
+
+  .icon-text ul {
+    line-height: 1.9em;
+    font-size: 16px;
+  }
+
+  .box.active .header-title p {
+    font-size: 20px;
+    line-height: 1.3em;
+  }
+
+  .icon-text {
+    margin-bottom: 60px;
+  }
+
+  .big-letter {
+    font-size: 240px;
+  }
+
+  .post-content {
+    padding: 0 60px;
+  }
+
+  .single .full {
+    padding: 160px 60px;
+  }
+
+  nav.wrapper {
+    padding: 100px 60px;
+  }
+
+  nav.wrapper a span.title {
+    font-size: 18px;
+  }
+
+  .item {
+    height: 38vw;
+  }
+
+  .item .client-name {
+    position: absolute;
+    left: 40px;
+    top: 80%;
+    width: 30%
+  }
+
+  .item .project{
+    position: absolute;
+    right: 20px;
+    top: 80%;
+    width: 40%;
+  }
+
+  .post {
+    height: 400px;
+  }
+
+}
+
+
+@media only screen and (max-width: 1024px)  {
+  svg#svg-graphic-about, svg#svg-graphic-works, svg#svg-graphic-blog, svg#svg-graphic-contact {
+    width: 300px;
+  }
+
+  .nav-video {
+    width: 294px;
+  }
+  .item {
+    height: 55vw;
+  }
+
+  .item .client-name {
+    position: absolute;
+    left: 50px;
+    top: 80%;
+    width: 30%
+  }
+
+  .item .project{
+    position: absolute;
+    right: 20px;
+    top: 80%;
+    width: 30%;
+  }
+
+  .circle-wrap {
+    height: 38vw;
+  }
+
+  .case-video-wrapper  {
+    height: 500px;
+  }
+
+  .box.active .header-title {
+    top: 30%;
+  }
+
+  .case-header .case-title {
+    top: 30%;
+  }
+
+  .post {
+    height: 350px;
+  }
+
+
+}
+
+@media only screen and (max-width: 768px)  {
+  svg#svg-graphic-about, svg#svg-graphic-works, svg#svg-graphic-blog, svg#svg-graphic-contact {
+    width: 280px;
+  }
+
+  .nav-video {
+    width: 274px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  body.single .post h2 {
+    font-size: 28px;
+  }
+
+  .case-header .case-title h2 {
+    font-size: 28px;
+  }
+
+  .circle-1 {
+    position: absolute;
+    right: 0;
+    top: 400px;
+  }
+
+  .circle-2 {
+    position: absolute;
+    right: 200px;
+    top: 100px;
+  }
+
+  .circle-3 {
+    position: absolute;
+    left: 0;
+    bottom: 60px;
+  }
+
+  .circle-4 {
+    position: absolute;
+    left: 30px;
+    top: 150px;
+  }
+
+  .triangle-1 {
+    position: absolute;
+    right: 100px;
+    bottom: 100px;
+  }
+
+  .triangle-2 {
+    position: absolute;
+    right: 200px;
+    bottom: 50px;
+  }
+
+  nav.wrapper a span.title {
+    display: none;
+  }
+
+  nav.wrapper a span.sub-title {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: montserrat, sans-serif;
+    text-transform: uppercase;
+  }
+
+  nav.wrapper a.previous i {
+    top: -7px;
+  }
+
+  nav.wrapper a.next i {
+    top: -7px;
+  }
+
+  .item {
+    height: 60vw;
+  }
+
+  .item .client-name {
+    position: absolute;
+    left: 40px;
+    top: 78%;
+    width: 30%
+  }
+
+  .item .project{
+    position: absolute;
+    right: 20px;
+    top: 78%;
+    width: 40%;
+  }
+
+  .circle-wrap {
+    height: 40vw;
+  }
+
+  .case-video-wrapper  {
+    height: 400px;
+  }
+
+
+  .header span {
+    font-size: 14px;
+    bottom: 25%;
+    left: 70% !important;
+  }
+
+  .box:hover .header span {
+    bottom: 25%;
+  }
+
+
+   .box.active .header-title {
+    color: #000;
+   }
+
+  .box.active .header-title h2 {
+    color: #000;
+  }
+
+  #about.box.active svg, #works.box.active svg, #blog.box.active svg, #contact.box.active svg {
+    display: block;
+  }
+
+  .box.active svg#svg-graphic-about, .box.active svg#svg-graphic-works, .box.active svg#svg-graphic-blog, .box.active svg#svg-graphic-contact {
+    width: 400px;
+  }
+
+  #about.box.active .nav-video, #works.box.active .nav-video, #blog.box.active .nav-video, #contact.box.active .nav-video {
+    width: 400px;
+    height: auto;
+    top: 20%;
+    transform: translate3d(-50%, -20%, 0);
+  }
+
+  .box.active .header svg {
+    top: 20%;
+    transform: translate3d(-50%, -30%, 0) scale(1.01);
+  }
+
+  .box.active .header-title {
+    top: 60%;
+    bottom: 30px;
+    h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+  }
+
+}
+
+@media only screen and (max-width: 640px) {
+  svg#svg-graphic-about, svg#svg-graphic-works, svg#svg-graphic-blog, svg#svg-graphic-contact {
+    width: 250px;
+  }
+
+  .nav-video {
+    width: 244px;
+  }
+
+  .circle-1 {
+    display: none;
+  }
+
+  .circle-2 {
+    position: absolute;
+    right: 100px;
+    top: 100px;
+  }
+
+  .circle-3 {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+
+  .circle-4 {
+    position: absolute;
+    left: 50px;
+    top: 150px;
+  }
+
+  .triangle-1 {
+    position: absolute;
+    right: 50px;
+    bottom: 50px;
+  }
+
+  .triangle-2 {
+    position: absolute;
+    right: 200px;
+    bottom: 50px;
+  }
+
+  .box.active .header-title h2 {
+    font-size: 28px;
+  }
+
+  .big-letter {
+    font-size: 200px;
+  }
+
+  .item {
+    height: 110vw;
+  }
+
+  .item .client-name {
+    position: absolute;
+    left: 50px;
+    top: 82%;
+    width: 30%
+  }
+
+  .item .project{
+    position: absolute;
+    right: 20px;
+    top: 82%;
+    width: 30%;
+  }
+
+  .circle-wrap {
+    height: 80vw;
+  }
+
+  .case-video-wrapper {
+    height: 300px;
+  }
+
+
+  .item.small-nav {
+    padding: 20px 0;
+    height: 240px;
+  }
+
+  .item.small-nav.previous .nav-title {
+    position: absolute;
+    top: 130px;
+    left: 200px;
+  }
+
+  .item.small-nav.next  .circle-wrap {
+    position: absolute;
+    right: 0;
+  }
+
+  .item.small-nav.next .nav-title {
+    position: absolute;
+    top: 130px;
+    right: 200px;
+  }
+
+  .header span {
+    font-size: 14px;
+    bottom: 20%;
+    left: 50% !important;
+    transform: translateX(-50%);
+  }
+
+  .box:hover .header span {
+    bottom: 20%;
+  }
+
+  .post {
+    height: 450px;
+  }
+
+}
+
+@media only screen and (max-width: 568px) {
+  svg#svg-graphic-about, svg#svg-graphic-works, svg#svg-graphic-blog, svg#svg-graphic-contact {
+    width: 200px;
+  }
+
+  .nav-video {
+    width: 194px;
+  }
+  .big-letter {
+    font-size: 280px;
+  }
+
+  .item {
+    height: 120vw;
+  }
+
+  .item .client-name {
+    position: absolute;
+    left: 50px;
+    top: 80%;
+    width: 30%
+  }
+
+  .item .project{
+    position: absolute;
+    right: 20px;
+    top: 80%;
+    width: 40%;
+  }
+
+  .circle-wrap {
+    height: 80vw;
+  }
+
+}

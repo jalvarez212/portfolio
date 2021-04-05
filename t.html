@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>t.js</title>
+    <link rel="stylesheet" href="master.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="t.js"></script>
+    <style>
+    
+@media only screen and (max-width: 481px) {
+  pre  {
+    color: #13ed62;
+    font-size: 9px;
+    font-family: monospace;
+    font-weight: bolder;
+    position: absolute;
+    top: 0px;
+    left: 5px;
+    padding: 5px;
+    z-index: 1;
+    max-width: 50%;
+
+}
+}
+</style>
+</head>
+<body>
+
+    <pre id="main">
+hello?<ins><span id="pow-txt">---[Design tuts!]</span></ins>
+<span id="tagline">I publish online content related to web designing,<ins>1.5</ins><br>trying to build elegant solutions for all curious learners<br>out there</span><del></del><del id="pow-trigger"></del> \\
+</pre>
+
+    <script>
+    
+    $('#main').t({
+ beep:true,
+ caret:'<span style="color:#13ed62;">•</span>',
+ typing:function(elm,chr){
+
+   if(chr.match(/\-trigger/))
+     $('#pow-txt').show().delay(500).fadeOut(0);
+  
+ }
+});
+    
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

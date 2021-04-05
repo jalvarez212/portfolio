@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en" style="width: 100%; height: 100%; margin: 0;">
+<head>
+<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+<meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+  <style>
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 9999999; /* Sit on top */
+    overflow: auto;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+     /* Enable scroll if needed */
+    }
+
+/* Modal Content */
+.modal-content {
+ background-color: rgba(96, 125, 139, 0.85);    
+  padding: 20px;
+  border: 1px solid #888;
+  font-family: 'Karla', sans-serif;
+  /*
+  font-size: 14px;
+  font-weight: 200;*/
+
+}
+
+h1 {
+  font-size: 28px;
+  font-style: normal;
+}
+p {
+
+  font-size: 16px;
+  font-style: light;
+}
+
+
+
+/* The Close Button */
+.close2 {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close2:hover,
+.close2:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.close1 {
+  color: #aaaaaa;
+  margin-right: 50%;
+  margin-left: 50%;
+
+}
+
+.close1:hover,
+.close1:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button {
+    background-image: url(info-standard-line.svg);
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0);
+    top: 0;
+    cursor: pointer;
+    min-width: 50px;
+    min-height: 50px;
+    margin: auto;
+    position: fixed;
+    left: 0;
+    z-index: 999999;
+    border: 0;
+    margin: 5px;
+    }
+
+
+
+</style>
+
+
+</head>
+<body style="width: 100%; height: 100%; margin: auto;">
+  <!-- NGL -->
+  
+  <!--<script src="modal.js"></script> -->
+
+
+  <script src="ngl.js"></script>
+
+
+  
+  <script>
+
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+      var stage = new NGL.Stage("viewport");
+      stage.loadFile("https://cdn.glitch.com/cf7080ba-ed89-4c3e-a0ee-f1f873a05693%2FCLA.cif?1548115108677", {defaultRepresentation: true});
+                                                              }
+
+   
+      );
+
+
+ 
+
+  </script>
+<div id="viewport" style="width: 100%; height: 100%; margin: auto;">
+  <!-- Trigger/Open The Modal -->
+
+  <button id="myBtn" type="button" class="btn btn-icon">
+    <clr-icon shape="info-circle" style="width: 100%; height: 100%; margin: auto;"></clr-icon>
+    <clr-icon shape="home"></clr-icon>
+
+ </button>
+
+	<div id="myModal" class="modal">
+
+
+  		<div class="modal-content">
+    		<span class="close2">&times;</span>
+    		
+   <h1>RESEARCHERS CREATE HIGH-RESOLUTION <br>
+    ATOMIC MODEL OF PHOTOSYNTHESIS</h1>
+  
+
+  <p>Despite its role in shaping life as we know it, many aspects of photosynthesis remain a mystery. The researchers used X-ray lasers to capture the most complete and highest-resolution picture to date of Photosystem II, a key protein complex in plants, algae and cyanobacteria responsible for splitting water and producing the oxygen we breathe.</p>
+
+    <p>Although they still have a way to go, the researchers said that these results provide a path forward, both in unveiling the mysteries of how photosynthesis works and in offering a blueprint for artificial sources of renewable energy. </p>
+
+ <p>The following model is a 3D view of a Chlorophyll A ligand, a critical component in oxygenic photosynthesis. This molecule absorbs light within the violet, blue and red wavelengths. The 3d model offers views of photosynthesis at the atomic level.  To leave this help window, click x in upper right hand corner.</p>
+
+ <br>
+
+<h3>Scroll controls</h3>
+      <ul> 
+          <li>Scroll up to zoom in on 3d model.</li>
+          <li>Scroll up to zoom out on 3d model.</li>
+      </ul>
+  
+   <h3>Mouse controls</h3>
+      <ul> 
+          <li>Click and hold to rotate 3d model around center.</li>
+      </ul>
+
+<h3>Color guide to 3d model</h3>
+      <p>
+        Hydrogen Bonds (blue), Halogen Bonds (turquoise), Hydrophobic Contacts (grey), Pi Interactions (orange, green), Metal Interactions (purple)
+</p>
+  <br>
+      <p>For more information on this research please visit <a href='https://hellosolar.info/'> Hello Solar</a></p>
+      <br>
+      <span class="close1">[close]</span>
+  		</div>
+
+  	</div>
+
+
+
+
+
+
+<script>
+// Get the modal expression
+var modal = document.getElementById('myModal');
+
+
+// Get the button that opens the modal expression
+
+var btn =  document.getElementById('myBtn');
+
+
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close2")[0];
+
+var close = document.getElementsByClassName("close1")[0];
+
+
+
+// on click of btn opens  modal expression
+btn.onclick = function() {
+  modal.style.display = "block";
+  btn.style.display = "none"
+};
+
+span.onclick = function() {
+ modal.style.display = "none";
+ btn.style.display = "block"
+};
+
+close.onclick = function() {
+ modal.style.display = "none";
+ btn.style.display = "block"
+};
+
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+
+
+</script> 
+</div>
+
+
+
+</body>
+</html>

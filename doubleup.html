@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mouse Shadow</title>
+</head>
+<body>
+
+  <div class="hero">
+    <h1 contenteditable>DOUBLE UP!🏁</h1>
+  </div>
+
+  <style>
+  html {
+    color: black;
+    font-family: sans-serif;
+  }
+
+  body {
+    margin: 0;
+  }
+
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+  }
+
+  h1 {
+    text-shadow: 10px 10px 0 rgba(0,0,0,1);
+    font-size: 100px;
+  }
+  </style>
+
+<script>
+  var hero = document.querySelector('h1');
+
+  function shadow (e){
+    
+    var max = 300;
+
+   
+
+var x =  e.offsetX;
+var y =  e.offsetY;
+    
+    if (e.target == hero){
+
+  
+      x = x + e.target.offsetLeft;
+      y = y + e.target.offsetTop;
+    
+      //`${x+e.target.offsetLeft}px ${y+e.target.offsetTop}px 0 rgba(255,0,255,0.7), ${x * -1 + e.target.offsetLeft}px ${y + e.target.offsetTop}px 0 rgba(255,255,0,0.7) , ${x + e.target.offsetLeft}px ${y* -1 + e.target.offsetTop}px 0 rgba(0,255,255,0.7), ${x* -1 + e.target.offsetLeft}px ${y * -1 + e.target.offsetTop}px 0 rgba(255,0,0,0.7) `
+    }
+
+        var rangeX =  (x/window.innerWidth) * max ;
+    var rangeY =  (y/ window.innerHeight) * max;
+
+        hero.style.textShadow = `${rangeX}px ${rangeY}px 0 rgba(255,0,255,0.7), ${rangeX  * -1}px ${rangeY}px 0 rgba(255,255,0,0.7) , ${rangeX }px ${rangeY* -1}px 0 rgba(0,255,255,0.7), ${rangeX * -1}px ${rangeY * -1}px 0 rgba(255,0,0,0.7) `
+
+ console.log(Math.round(x));
+  }
+
+
+window.addEventListener('mousemove', shadow);
+
+</script>
+</body>
+</html>

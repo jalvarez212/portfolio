@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>Documentation</title>
+    <link href="assets/css/documentation.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="assets/css/highlight/default.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="assets/js/documentation.js" type="text/javascript"></script>
+    <script src="assets/js/highlight.pack.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      hljs.initHighlightingOnLoad();
+    </script>
+  </head>
+  <body>
+    <div id='main'>
+      <h1>
+        Aoko
+        HTML Template
+      </h1>
+      <p id='author'>Documentation by Andy Lu</p>
+      <p id='banner'>
+        <img alt="" src="assets/images/banner.jpg" />
+      </p>
+      <p id='intro'>
+        Thanks for buying
+        "Aoko",
+        the premium website template. In this help documentation, I will walk you through the template files, this information may help you with customizing the template for your own use.
+      </p>
+      <div class='section'>
+        <h2>HTML Structure</h2>
+        <p>
+          This template is based on
+          <a href="http://foundation.zurb.com/">foundation</a>
+          framework, to understand what the "row", "column", and "container" classes mean, please reference to the foundation
+          <a href="http://foundation.zurb.com/docs/">documentation</a>.
+        </p>
+
+        <pre>
+          <code>&lt;!--
+
+  HTML files:
+
+    1. index.html -> the main layout and content file
+    2. portfolio-case-study.html -> single portfolio file
+    3. portfolio-case-study-2.html -> another single portfolio file
+    4. single.html -> blog single post layout file
+
+  The following is the structure of the index.html page
+
+  &lt;body&gt;
+    &lt;div class="logo"&gt;
+      &lt;a href="#"&gt;
+        logo here
+      &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div id="about" class="box"&gt;
+      &lt;div class="header"&gt;
+        &lt;nav&gt;
+          &lt;a href="#" onclick=""&gt;
+            &lt;video loop autoplay muted playsinline class="nav-video" preload &gt;
+              &lt;source src="" type="video/mp4"&gt;
+            &lt;/video&gt;
+            &lt;svg&gt;
+              &lt;defs&gt;
+                &lt;mask&gt;
+                  &lt;rect x="0" y="0" width="600" height="600" fill="#fff" /&gt;
+                  &lt;polygon class="path" points="330.2,160.2 269.8,160.2 149,439.8 215.4,439.8 241.4,379.4 358.6,379.4 384.6,439.8 451,439.8  "/&gt;
+                &lt;/mask&gt;
+              &lt;/defs&gt;
+              &lt;rect x="0" y="0" width="600" height="600" /&gt;
+            &lt;/svg&gt;
+            &lt;span&gt;
+              tile here
+            &lt;/span&gt;
+          &lt;/a&gt;
+        &lt;/nav&gt;
+        &lt;div class="header-title invisible"&gt;
+          &lt;div class="row"&gt;
+            &lt;div class="large-8 columns"&gt;
+              &lt;h2&gt;
+                big title here
+              &lt;/h2&gt;
+              &lt;p&gt;
+                tagline here
+              &lt;/p&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="content invisible"&gt;
+        &lt;div class="full"&gt;
+          &lt;div class="large-12 columns"&gt;
+            &lt;h2&gt;
+              section title
+            &lt;/h2&gt;
+            &lt;p&gt;
+              intro text
+            &lt;/p&gt;
+            &lt;p class="action-hint"&gt;
+              content
+            &lt;/p&gt;
+            &lt;div class="circle-1"&gt;&lt;/div&gt;
+            &lt;div class="circle-2"&gt;&lt;/div&gt;
+            &lt;div class="circle-3"&gt;&lt;/div&gt;
+            &lt;div class="triangle-1"&gt;&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="full"&gt;
+          content
+        &lt;/div&gt;
+        &lt;div class="full"&gt;
+          content
+        &lt;/div&gt;
+        &lt;div class="full"&gt;
+          content
+        &lt;/div&gt;
+        &lt;div class="full no-bottom"&gt;
+          content
+        &lt;/div&gt;
+        &lt;div class="members"&gt;
+          content
+        &lt;/div&gt;
+        &lt;div class="full footer-bg"&gt;
+          content
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div id="works" class="box"&gt;
+      content
+    &lt;/div&gt;
+    &lt;div id="blog" class="box"&gt;
+      content
+    &lt;/div&gt;
+    &lt;div id="contact" class="box"&gt;
+      content
+    &lt;/div&gt;
+    &lt;nav&gt;
+      &lt;a href="#" id='back' class="hide"&gt;
+        &lt;i class="fa fa-close"&gt; &lt;/i&gt;
+      &lt;/a&gt;
+    &lt;/nav&gt;
+  &lt;/body&gt;
+
+--&gt;</code>
+        </pre>
+
+
+
+      </div>
+      <div class='section'>
+        <h2>CSS Structure</h2>
+        <p>
+          The css files are mainly based(with some modifications) on
+          <a href="http://foundation.zurb.com/">foundation</a>
+          framework.
+        </p>
+        <pre>
+          <code>&lt;!--
+  CSS files:
+
+    1. app.css
+    2. font-awesome.css
+    3. fontello.css
+    4. foundation.css
+    5. linea-arrows.css
+    6. linea-styles.css
+    7. responsive.css
+    8. slick-theme.css
+    9. slick.css
+
+  The 'app.css' is the main style file for everything, the following is the structure of it.
+
+    1. Base
+    2. Logo
+    3. Home and nav
+    4. Content
+    5. Client
+    6. Icon-text
+    7. Members
+    8. Contact
+    9. Work
+    10. Post
+    11. Form
+    12. Case study
+
+--&gt;</code>
+        </pre>
+
+
+      </div>
+      <div class='section'>
+        <h2>Javascript Structure</h2>
+        <p>
+          The file "app.js" is written in a way required by the
+          <a href="http://terrifically.org/api/basics/">TerrificJS</a>
+          framework which enables you to modularize the jQuery code by solely relying on the
+          <a href="https://github.com/stubbornella/oocss/wiki">OOCSS</a>
+          naming conventions.
+        </p>
+              <pre>
+                <code>&lt;!--
+  Javascript files:
+    1. slick.min.js
+    2. jquery.appear.js
+    3. jquery.sequence-min.js
+    4. app.js
+
+  The 'app.js' is the main style file for everything, the following is the structure of it.
+
+    (function($){
+
+      // initialize things ...
+
+    })(jQuery);
+
+--&gt;</code>
+              </pre>
+
+      </div>
+      <div class='section'>
+        <h2>PHP Script</h2>
+        <p>
+          There is a php script "send.php" that will process the form submission and send emails, you need to change the email recipient to make it work.
+        </p>
+        <pre>
+          <code>&lt;!--
+    PHP scripts:
+    1. send.php
+
+    send.php
+    replace YOUR-EMAIL-ADDRESS with your email address
+
+    $to = "YOUR-EMAIL-ADDRESS";
+
+    $name = $_POST['name'];
+    $subject = "You've got a message";
+
+    ...
+
+--&gt;</code>
+              </pre>
+
+      </div>
+      <div class='section'>
+        <h2>Menu SVG Customization</h2>
+        <p>The SVG shape should not be larger than 600px by 337px. You could make a shape you want in Adobe Illustrator, fill the shape with black and select no stroke as shown below. </p>
+        <p><img src="assets/images/step-1.jpg" alt=""></p>
+        <p><img src="assets/images/step-2.jpg" alt=""></p>
+        <p>Then save the file as SVG, click save.</p>
+        <p><img src="assets/images/step-3.jpg" alt=""></p>
+        <p>Click the SVG code...</p>
+        <p><img src="assets/images/step-4.jpg" alt=""></p>
+        <p><img src="assets/images/step-5.jpg" alt=""></p>
+        <p>Copy the code you get, then replace one SVG shape code in the file index.html with the code you have just copied, the SVG shape codes are highlighted as followings.</p>
+        <p><img src="assets/images/code-1.jpg" alt=""></p>
+        <p><img src="assets/images/code-2.jpg" alt=""></p>
+        <p><img src="assets/images/code-3.jpg" alt=""></p>
+        <p><img src="assets/images/code-4.jpg" alt=""></p>
+      </div>
+
+      <div class='section'>
+        <h2>Fonts</h2>
+        <p>
+          Montserrat: <a href="https://fonts.google.com/specimen/Montserrat">https://fonts.google.com/specimen/Montserrat</a>
+        </p>
+        <p>
+          Lora: <a href="https://fonts.google.com/specimen/Lora">https://fonts.google.com/specimen/Lora</a>
+        </p>
+      </div>
+      <div class='section'>
+        <h2>Images&Resources</h2>
+        <p>
+          mazwai.com <br>
+          http://www.wedistill.io/ <br>
+          https://videos.pexels.com/ <br>
+          http://coverr.co/ <br>
+          https://unsplash.com/ <br>
+          https://photodune.net/item/portrait-of-a-handsome-young-man-smiling/7503445?s_rank=40 <br>
+          https://photodune.net/item/portrait-of-a-handsome-young-man-smiling/7655245?s_rank=42 <br>
+          https://photodune.net/item/handsome-guy-in-jeans/15168997 <br>
+          https://photodune.net/item/business-woman-smiling/8604152?s_rank=16&_ga=2.183468070.1026305448.1512533791-1229448521.1402976743<br>
+          https://photodune.net/item/cute-girl/6671064?ref=neawolf
+
+        </p>
+      </div>
+      <p id='rate'>
+        Thanks again for purchasing this template.
+        <br>
+        Please contact me via
+        <a href='mailto:honryou@gmail.com'>honryou@gmail.com</a>
+        if you want to.
+        <br>
+        And please go to your themeforest downloads page to rate this template when you have time.
+      </p>
+    </div>
+    <!-- %p#hire-me -->
+    <!-- Want special customization for this theme or a totally unique theme from scratch? -->
+    <!-- %a{ :href => "http://www.odesk.com/users/~~d1d8a419899e2f71" } Hire me on oDesk! -->
+  </body>
+</html>
