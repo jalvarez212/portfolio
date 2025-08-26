@@ -177,15 +177,15 @@ to{transform:translateY(5px);}
 .triangle-1{position:absolute;background-color:#ff5242;right:25%;bottom:200px;width:0;height:0;border-left:20px solid transparent;border-right:20px solid transparent;border-bottom:40px solid red;opacity:0;transform:translateY(0);transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);}
 .triangle-2{position:absolute;right:25%;bottom:50px;width:0;height:0;border-left:20px solid transparent;border-right:20px solid transparent;border-top:40px solid #FE494B;opacity:0;transform:translateY(0) rotate(-90deg);transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);}
 .circle-1.appear, .circle-2.appear, .circle-3.appear, .circle-4.appear, .triangle-1.appear, .triangle-2.appear{opacity:1;transform:translateY(-50px);}
-.icon-1{width:100px;height:100px;background-color:#ffffff;background-image:url(../../images/@stock/floor.png);}
-.icon-2{width:100px;height:100px;background-color:#ffffff;background-image:url(../../images/@stock/edit1.png);background-repeat:repeat;}
-.icon-3{width:100px;height:100px;background-color:#ffffff;background-image:url(../../images/@stock/code.png);background-repeat:repeat;}
+/* .icon-1{width:100px;height:100px;background-color:#ffffff;background-image:url(../../images/@stock/floor.png);background-repeat:repeat;}
+.icon-2{width:100px;height:100px;background-color:#ffffff;background-image:url(../../images/@stock/wave.png);background-repeat:repeat;}
+.icon-3{width:100px;height:100px;background-color:#ffffff;background-image:url(../../images/@stock/floor.png);background-repeat:repeat;} */
 .icon-text h3{margin-top:-50px;margin-left:80px;}
 .icon-text ul{margin-left:60px;margin-top:50px;list-style:none;line-height:1.9em;font-size:18px;}
 .icon-text ul li::before{content:"";width:10px;height:1px;margin-right:10px;display:inline-block;background:#ff5242;}
-.icon-text:hover .icon-2{-webkit-animation:BackgroundAnimated-l-r 2s linear infinite;-moz-animation:BackgroundAnimated-l-r 2s linear infinite;-ms-animation:BackgroundAnimated-l-r 2s linear infinite;-o-animation:BackgroundAnimated-l-r 2s linear infinite;animation:BackgroundAnimated-l-r 2s linear infinite;}
+.icon-text:hover .icon-2{-webkit-animation:BackgroundAnimated-t-b 2s linear infinite;-moz-animation:BackgroundAnimated-t-b 2s linear infinite;-ms-animation:BackgroundAnimated-t-b 2s linear infinite;-o-animation:BackgroundAnimated-t-b 2s linear infinite;animation:BackgroundAnimated-t-b 2s linear infinite;}
 .icon-text:hover .icon-1{-webkit-animation:BackgroundAnimated-t-b 2s linear infinite;-moz-animation:BackgroundAnimated-t-b 2s linear infinite;-ms-animation:BackgroundAnimated-t-b 2s linear infinite;-o-animation:BackgroundAnimated-t-b 2s linear infinite;animation:BackgroundAnimated-t-b 2s linear infinite;}
-.icon-text:hover .icon-3{-webkit-animation:BackgroundAnimated-r-l 2s linear infinite;-moz-animation:BackgroundAnimated-r-l 2s linear infinite;-ms-animation:BackgroundAnimated-r-l 2s linear infinite;-o-animation:BackgroundAnimated-r-l 2s linear infinite;animation:BackgroundAnimated-r-l 2s linear infinite;}
+.icon-text:hover .icon-3{-webkit-animation:BackgroundAnimated-t-b 2s linear infinite;-moz-animation:BackgroundAnimated-t-b 2s linear infinite;-ms-animation:BackgroundAnimated-t-b 2s linear infinite;-o-animation:BackgroundAnimated-t-b 2s linear infinite;animation:BackgroundAnimated-t-b 2s linear infinite;}
 .members .columns{padding:0;}
 .modBoxedTextSlider{width:100%;background:#000;}
 .modBoxedTextSlider .slidebox{background:#e9e9e9;padding-top:60px;color:#fff;position:relative;ransition:background 0.1s ease-in;}
@@ -355,7 +355,7 @@ p#thanks{color:#ccc;padding:40px 0;}
 .case-header .case-header-image10{width:100%;height:100%;background:url(../../images/@stock/1hackerway1.jpg) center center no-repeat;background-size:cover;}
 .case-header .case-header-image11{width:100%;height:100%;background:url(../../images/@stock/photosyn.png) center center no-repeat;background-size:cover;}
 .case-header .case-header-image12{width:100%;height:100%;background:url(../../images/@stock/abanca.png) center center no-repeat;background-size:cover;}
-
+.case-header .case-header-image13{width:100%;height:100%;background:url(../../images/@stock/salesforce_header.jpg) center center no-repeat;background-size:cover;}
 
 .case-header .image-overlay{width:100%;height:100%;background:#000;opacity:0.1;position:absolute;top:0;left:0;}
 .case-header .action-hint{position:absolute;bottom:50px;right:10%;color:#fff;}
