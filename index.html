@@ -220,7 +220,7 @@
           <div class="item">
             <a href="elizabetharden.html">
               <div class="circle-wrap">
-                <div class="media work-22"></div>
+                <div class="media work-22" style="background-image: url('images/@stock/liz.png'); background-size: cover; background-position: center;"></div>
               </div>
               <div class="client-name">
                 <h2>Client</h2>
@@ -238,7 +238,7 @@
           <div class="item">
             <a href="upwork.html">
               <div class="circle-wrap">
-                <div class="media work-23"></div>
+                <div class="media work-23" style="background-image: url('images/@stock/upwork1.jpg'); background-size: cover; background-position: center;"></div>
               </div>
               <div class="client-name">
                 <h2>Client</h2>
@@ -256,7 +256,7 @@
           <div class="item">
             <a href="salesforce.html">
               <div class="circle-wrap">
-                <div class="media work-24"></div>
+                <div class="media work-24" style="background-image: url('images/@stock/salesforce2.png'); background-size: cover; background-position: center;"></div>
               </div>
               <div class="client-name">
                 <h2>Client</h2>
@@ -426,156 +426,362 @@
               <rect x="0" y="0" width="600" height="338" />
             </svg>
 
-            <span>Fun</span>
+            <span>QUIZ</span>
           </a>
         </h2>
       </nav>
       <div class="header-title invisible">
         <div class="row">
           <div class="large-8 columns" style="width: 100%;">
-            <h2>Fun</h2>
+            <h2>Quiz</h2>
             <p>Preformance Media | Growth Engineer</p>
           </div>
         </div>
       </div>
     </div>
     <div class="content invisible">
-      <div class="spacing"></div>
+      <div class="three spacing"></div>
       <div class="row">
-        <div class="large-12 columns">
-          <h2 class="colored-title">CPM Calculator</h2>
-          <p class="big-text">Calculate your Cost Per Mille (CPM) - the cost per thousand impressions for your advertising campaigns. Enter any two values to calculate the third.</p>
+        <div class="large-12 columns text-center">
+          <h2 class="colored-title">Find Your Marketing Superpower</h2>
+          <div class="two spacing"></div>
+          <p class="big-text" style="max-width: 700px; margin: 0 auto 40px;">Answer a few quick questions to discover your unique marketing superpower.</p>
+          <div class="spacing"></div>
         </div>
       </div>
-
+    
       <div class="row">
         <div class="large-8 medium-10 small-12 columns" style="margin: 0 auto; float: none;">
-          <div style="background: #f9f9f9; padding: 30px; border-radius: 8px; box-shadow: 0 2px 15px rgba(0,0,0,0.05);">
-            <form id="cpm-calculator" style="margin-bottom: 20px;">
-              <div class="row">
-                <div class="large-4 columns">
-                  <label>Campaign Cost ($)
-                    <input type="number" id="campaign-cost" placeholder="Total cost" min="0" step="0.01">
-                  </label>
+          <div class="quiz-container">
+            <form id="quiz-form">
+              <div class="quiz-card-container">
+                <!-- Question 1 -->
+                <div class="quiz-card active" id="card-1">
+                  <span class="quiz-progress">1/3</span>
+                  <h4>What excites you most in a campaign?</h4>
+                  <div class="quiz-options">
+                    <label class="quiz-option">
+                      <input type="radio" name="q1" value="analytics">
+                      <span class="option-text">Diving into analytics and uncovering insights</span>
+                    </label>
+                    <label class="quiz-option">
+                      <input type="radio" name="q1" value="creative">
+                      <span class="option-text">Crafting bold creative that stands out</span>
+                    </label>
+                    <label class="quiz-option">
+                      <input type="radio" name="q1" value="growth">
+                      <span class="option-text">Scaling growth with clever hacks</span>
+                    </label>
+                  </div>
+                  <div class="quiz-nav">
+                    <button type="button" class="button boxed black next-btn">Next</button>
+                  </div>
                 </div>
-                <div class="large-4 columns">
-                  <label>Impressions
-                    <input type="number" id="impressions" placeholder="Number of impressions" min="0" step="1">
-                  </label>
+                
+                <!-- Question 2 -->
+                <div class="quiz-card" id="card-2">
+                  <span class="quiz-progress">2/3</span>
+                  <h4>What's your go-to tool?</h4>
+                  <div class="quiz-options">
+                    <label class="quiz-option">
+                      <input type="radio" name="q2" value="analytics">
+                      <span class="option-text">Excel, SQL, dashboards</span>
+                    </label>
+                    <label class="quiz-option">
+                      <input type="radio" name="q2" value="creative">
+                      <span class="option-text">Photoshop, Figma, Canva</span>
+                    </label>
+                    <label class="quiz-option">
+                      <input type="radio" name="q2" value="growth">
+                      <span class="option-text">APIs, scripts, automation tools</span>
+                    </label>
+                  </div>
+                  <div class="quiz-nav">
+                    <button type="button" class="button boxed prev-btn">Previous</button>
+                    <button type="button" class="button boxed black next-btn">Next</button>
+                  </div>
                 </div>
-                <div class="large-4 columns">
-                  <label>CPM ($)
-                    <input type="number" id="cpm-rate" placeholder="Cost per 1000 impressions" min="0" step="0.01">
-                  </label>
-                </div>
-              </div>
-              <div class="row" style="margin-top: 20px;">
-                <div class="large-12 columns text-center">
-                  <button type="button" id="calculate-btn" class="button boxed black" style="margin-right: 10px;">Calculate</button>
-                  <button type="button" id="reset-btn" class="button boxed">Reset</button>
+                
+                <!-- Question 3 -->
+                <div class="quiz-card" id="card-3">
+                  <span class="quiz-progress">3/3</span>
+                  <h4>How do you celebrate success?</h4>
+                  <div class="quiz-options">
+                    <label class="quiz-option">
+                      <input type="radio" name="q3" value="analytics">
+                      <span class="option-text">By showing the ROI and proving impact</span>
+                    </label>
+                    <label class="quiz-option">
+                      <input type="radio" name="q3" value="creative">
+                      <span class="option-text">By seeing the brand come alive in the market</span>
+                    </label>
+                    <label class="quiz-option">
+                      <input type="radio" name="q3" value="growth">
+                      <span class="option-text">By finding the next lever to scale even bigger</span>
+                    </label>
+                  </div>
+                  <div class="quiz-nav">
+                    <button type="button" class="button boxed prev-btn">Previous</button>
+                    <button type="button" id="quiz-submit" class="button boxed black">Reveal My Superpower</button>
+                  </div>
                 </div>
               </div>
             </form>
-            <div id="result" style="display: none; text-align: center; padding: 20px; background: #f0f0f0; border-radius: 5px; margin-top: 20px;">
-              <h4 id="result-text">Your calculated value will appear here</h4>
+    
+            <div id="quiz-result" class="quiz-result">
+              <div class="result-card">
+                <h4 id="quiz-result-text">Your result will appear here</h4>
+                <button type="button" id="quiz-reset" class="button boxed">Start Over</button>
+              </div>
             </div>
           </div>
         </div>
       </div>
-
-      <div class="spacing"></div>
-      <div class="row">
-        <div class="large-12 columns">
-          <h3>Understanding CPM</h3>
-          <p>CPM stands for "Cost Per Mille," where "mille" is Latin for thousand. It's a standard metric used in advertising to measure the cost of 1,000 advertisement impressions on a webpage or other media channel.</p>
-          
-          <div class="spacing"></div>
-          <h3>How to Calculate CPM</h3>
-          <p>The formula for CPM is:</p>
-          <p style="font-weight: bold;">CPM = (Campaign Cost / Number of Impressions) × 1,000</p>
-          <p>For example, if you spent $500 on a campaign that generated 100,000 impressions:</p>
-          <p>CPM = ($500 / 100,000) × 1,000 = $5.00</p>
-          <p>This means you paid $5.00 for every 1,000 impressions.</p>
-          
-          <div class="spacing"></div>
-          <h3>Frequently Asked Questions</h3>
-          
-          <h4>What is a good CPM?</h4>
-          <p>CPM rates vary widely based on industry, platform, targeting options, and ad format. Generally, more targeted or premium advertising commands higher CPM rates. For digital display ads, average CPMs typically range from $2-$10, while social media platforms can range from $5-$20 or higher.</p>
-          
-          <h4>Why is CPM important?</h4>
-          <p>CPM is crucial for budget planning and comparing the cost efficiency of different advertising platforms. It allows advertisers to understand how much they're paying to reach their audience across different channels.</p>
-          
-          <h4>What's the difference between CPM and CPC?</h4>
-          <p>While CPM measures cost per 1,000 impressions, CPC (Cost Per Click) measures how much you pay for each click on your advertisement. CPM focuses on visibility and brand awareness, while CPC is more concerned with driving traffic and engagement.</p>
-          
-          <h4>Should I use CPM bidding for my campaigns?</h4>
-          <p>CPM bidding is typically best for brand awareness campaigns where visibility is the primary goal. If you're focused on conversions or specific actions, CPC, CPA (Cost Per Acquisition), or ROAS (Return On Ad Spend) might be more appropriate metrics.</p>
-        </div>
-      </div>
-
-      <div class="spacing"></div>
       
+      <style>
+        .quiz-container {
+          background: #ffffff;
+          border-radius: 12px;
+          box-shadow: 0 12px 40px rgba(0,0,0,0.06);
+          position: relative;
+          margin-bottom: 60px;
+          max-width: 100%;
+          border: 1px solid rgba(0,0,0,0.03);
+        }
+        
+        .quiz-card-container {
+          position: relative;
+          min-height: 480px;
+        }
+        
+        .quiz-card {
+          padding: 40px;
+          display: none;
+          width: 100%;
+          height: auto;
+        }
+        
+        .quiz-card.active {
+          display: block;
+          animation: fadeIn 0.4s forwards;
+        }
+        
+        .quiz-progress {
+          display: inline-block;
+          background: #f5f5f5;
+          color: #888;
+          font-size: 12px;
+          font-weight: 600;
+          padding: 4px 12px;
+          border-radius: 20px;
+          margin-bottom: 20px;
+        }
+        
+        .quiz-card h4 {
+          font-size: 24px;
+          margin-bottom: 32px;
+          font-weight: 600;
+          color: #222;
+          letter-spacing: -0.2px;
+        }
+        
+        .quiz-options {
+          margin-bottom: 30px;
+        }
+        
+        .quiz-option {
+          display: block;
+          padding: 20px;
+          margin-bottom: 16px;
+          border-radius: 10px;
+          border: 1px solid #eee;
+          transition: all 0.3s;
+          cursor: pointer;
+          position: relative;
+          overflow: hidden;
+        }
+        
+        .quiz-option:hover {
+          border-color: #ddd;
+          background: #f9f9f9;
+          transform: translateY(-2px);
+        }
+        
+        .quiz-option input {
+          margin-right: 12px;
+          position: relative;
+          top: -1px;
+        }
+        
+        .quiz-option input:checked + .option-text {
+          font-weight: 600;
+          color: #000;
+        }
+        
+        .quiz-option:has(input:checked) {
+          border-color: #ff5242;
+          background: rgba(255, 82, 66, 0.05);
+          box-shadow: 0 4px 16px rgba(255, 82, 66, 0.1);
+        }
+        
+        .quiz-nav {
+          display: flex;
+          justify-content: space-between;
+        }
+        
+        .quiz-nav button {
+          min-width: 100px;
+        }
+        
+        .quiz-nav .next-btn {
+          margin-left: auto;
+        }
+        
+        .quiz-result {
+          display: none;
+          padding: 40px;
+          text-align: center;
+        }
+        
+        .result-card {
+          padding: 40px 30px;
+          border-radius: 12px;
+          background: linear-gradient(135deg, #fcf9f9 0%, #f8f3f3 100%);
+          border: 1px solid rgba(0,0,0,0.03);
+        }
+        
+        .result-card h4 {
+          font-size: 22px;
+          margin-bottom: 28px;
+          color: #222;
+          line-height: 1.5;
+          letter-spacing: -0.2px;
+        }
+        
+        @keyframes fadeIn {
+          from { opacity: 0; transform: translateY(20px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .quiz-result.active {
+          display: block;
+          animation: fadeIn 0.5s forwards;
+        }
+      </style>
+    
       <script>
         document.addEventListener('DOMContentLoaded', function() {
-          const costInput = document.getElementById('campaign-cost');
-          const impressionsInput = document.getElementById('impressions');
-          const cpmInput = document.getElementById('cpm-rate');
-          const calculateBtn = document.getElementById('calculate-btn');
-          const resetBtn = document.getElementById('reset-btn');
-          const result = document.getElementById('result');
-          const resultText = document.getElementById('result-text');
+          const quizForm = document.getElementById('quiz-form');
+          const quizSubmit = document.getElementById('quiz-submit');
+          const quizReset = document.getElementById('quiz-reset');
+          const quizResult = document.getElementById('quiz-result');
+          const quizResultText = document.getElementById('quiz-result-text');
+          const quizCards = document.querySelectorAll('.quiz-card');
+          const nextButtons = document.querySelectorAll('.next-btn');
+          const prevButtons = document.querySelectorAll('.prev-btn');
           
-          calculateBtn.addEventListener('click', function() {
-            // Get input values
-            const cost = parseFloat(costInput.value);
-            const impressions = parseFloat(impressionsInput.value);
-            const cpm = parseFloat(cpmInput.value);
-            
-            // Count how many fields are filled
-            let filledFields = 0;
-            if (!isNaN(cost)) filledFields++;
-            if (!isNaN(impressions)) filledFields++;
-            if (!isNaN(cpm)) filledFields++;
-            
-            // If exactly two fields are filled, calculate the third
-            if (filledFields === 2) {
-              if (isNaN(cost)) {
-                // Calculate cost
-                const calculatedCost = (cpm * impressions) / 1000;
-                costInput.value = calculatedCost.toFixed(2);
-                resultText.innerHTML = `<strong>Campaign Cost:</strong> $${calculatedCost.toFixed(2)}`;
-              } else if (isNaN(impressions)) {
-                // Calculate impressions
-                const calculatedImpressions = (cost * 1000) / cpm;
-                impressionsInput.value = Math.round(calculatedImpressions);
-                resultText.innerHTML = `<strong>Impressions:</strong> ${Math.round(calculatedImpressions).toLocaleString()}`;
-              } else if (isNaN(cpm)) {
-                // Calculate CPM
-                const calculatedCPM = (cost / impressions) * 1000;
-                cpmInput.value = calculatedCPM.toFixed(2);
-                resultText.innerHTML = `<strong>CPM Rate:</strong> $${calculatedCPM.toFixed(2)}`;
+          // Handle navigation between cards
+          nextButtons.forEach(btn => {
+            btn.addEventListener('click', function() {
+              const currentCard = this.closest('.quiz-card');
+              const currentId = parseInt(currentCard.id.split('-')[1]);
+              const nextId = currentId + 1;
+              const nextCard = document.getElementById(`card-${nextId}`);
+              
+              // Check if question is answered
+              const questionName = `q${currentId}`;
+              const isAnswered = quizForm.querySelector(`input[name="${questionName}"]:checked`);
+              
+              if (!isAnswered) {
+                // Shake animation if not answered
+                currentCard.style.animation = 'shake 0.5s';
+                setTimeout(() => {
+                  currentCard.style.animation = '';
+                }, 500);
+                return;
               }
               
-              result.style.display = 'block';
-            } else if (filledFields < 2) {
-              resultText.innerHTML = 'Please fill in at least two fields to calculate the third.';
-              result.style.display = 'block';
-            } else {
-              resultText.innerHTML = 'Please leave one field empty to calculate its value.';
-              result.style.display = 'block';
-            }
+              // Transition to next card
+              if (nextCard) {
+                currentCard.classList.remove('active');
+                nextCard.classList.add('active');
+              }
+            });
           });
           
-          resetBtn.addEventListener('click', function() {
-            costInput.value = '';
-            impressionsInput.value = '';
-            cpmInput.value = '';
-            result.style.display = 'none';
+          prevButtons.forEach(btn => {
+            btn.addEventListener('click', function() {
+              const currentCard = this.closest('.quiz-card');
+              const currentId = parseInt(currentCard.id.split('-')[1]);
+              const prevId = currentId - 1;
+              const prevCard = document.getElementById(`card-${prevId}`);
+              
+              if (prevCard) {
+                currentCard.classList.remove('active');
+                prevCard.classList.add('active');
+              }
+            });
           });
+    
+          // Handle quiz submission
+          quizSubmit.addEventListener('click', function() {
+            const answers = Array.from(new FormData(quizForm).values());
+            if (answers.length < 3) {
+              // Shake animation if not all questions answered
+              const currentCard = document.querySelector('.quiz-card.active');
+              currentCard.style.animation = 'shake 0.5s';
+              setTimeout(() => {
+                currentCard.style.animation = '';
+              }, 500);
+              return;
+            }
+    
+            // Count answers
+            const counts = { analytics: 0, creative: 0, growth: 0 };
+            answers.forEach(a => counts[a]++);
+    
+            // Determine dominant category
+            let superpower = Object.keys(counts).reduce((a, b) => counts[a] > counts[b] ? a : b);
+    
+            let message = '';
+            if (superpower === 'analytics') {
+              message = "📊 Your superpower is <strong>Business Analytics & Measurement</strong> — you thrive on turning data into strategy.";
+            } else if (superpower === 'creative') {
+              message = "🎨 Your superpower is <strong>Paid & Earned Media Execution</strong> — you bring brands to life with bold creative.";
+            } else {
+              message = "🚀 Your superpower is <strong>Growth Engineering</strong> — you scale fast with smart, technical problem-solving.";
+            }
+    
+            quizResultText.innerHTML = message;
+            document.querySelector('.quiz-card-container').style.display = 'none';
+            quizResult.classList.add('active');
+          });
+    
+          // Reset quiz
+          quizReset.addEventListener('click', function() {
+            quizForm.reset();
+            quizResult.classList.remove('active');
+            document.querySelector('.quiz-card-container').style.display = 'block';
+            
+            // Reset to first card
+            quizCards.forEach(card => card.classList.remove('active'));
+            document.getElementById('card-1').classList.add('active');
+          });
+          
+          // Add shake animation
+          document.head.insertAdjacentHTML('beforeend', `
+            <style>
+              @keyframes shake {
+                0%, 100% { transform: translateX(0); }
+                20%, 60% { transform: translateX(-5px); }
+                40%, 80% { transform: translateX(5px); }
+              }
+            </style>
+          `);
         });
       </script>
     </div>
+    
   </div>
 
   <div id="contact" class="box">
