@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Influence Is Not Popularity: A Visual Essay</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: #ffffff !important;
+        }
+
+        .essay-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: #ffffff;
+        }
+
+        .essay-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem 0;
+        }
+
+        .essay-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .essay-subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            font-style: italic;
+        }
+
+        .essay-section {
+            margin-bottom: 4rem;
+        }
+
+        .essay-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #1a1a1a;
+            margin-bottom: 2rem;
+            max-width: 800px;
+        }
+
+        .essay-text p {
+            margin-bottom: 1.5rem;
+            color: #1a1a1a;
+        }
+
+        .essay-text strong {
+            color: #000;
+        }
+
+        .essay-text em {
+            color: #333;
+        }
+
+        .visualization-wrapper {
+            margin: 3rem 0;
+            padding: 2rem;
+            background: #f8f9fa;
+            border-radius: 12px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .visualization-wrapper h3 {
+            color: #1a1a1a;
+        }
+
+        .viz-caption {
+            font-size: 0.95rem;
+            color: #555;
+            font-style: italic;
+            margin-top: 1rem;
+            text-align: center;
+        }
+
+        .viz-caption strong {
+            color: #000;
+        }
+
+        .section-heading {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 1.5rem;
+            border-left: 4px solid #3498db;
+            padding-left: 1rem;
+        }
+
+        .highlight-box {
+            background: #e8f4f8;
+            border-left: 4px solid #3498db;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .highlight-box p {
+            margin: 0;
+            color: #1a1a1a;
+            font-weight: 500;
+        }
+
+        .highlight-box strong {
+            color: #000;
+        }
+
+        .canvas-container {
+            position: relative;
+            width: 100%;
+            height: 600px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .control-panel {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e0e0e0;
+        }
+
+        .control-panel h3 {
+            color: #1a1a1a;
+        }
+
+        .control-panel label {
+            color: #333 !important;
+        }
+
+        .control-panel .legend-item span {
+            color: #333;
+        }
+
+        /* Model selector buttons */
+        .model-selector .model-btn {
+            background: #f8f9fa;
+            border: 2px solid #d0d0d0;
+            color: #1a1a1a;
+        }
+
+        .model-selector .model-btn:hover {
+            border-color: #3498db;
+            background: #e8f4f8;
+        }
+
+        .model-selector .model-btn.active {
+            background: #e8f4f8;
+            border-color: #3498db;
+        }
+
+        .model-selector .model-name {
+            color: #1a1a1a;
+        }
+
+        .model-selector .model-desc {
+            color: #555;
+        }
+
+        /* Visualization wrapper styling */
+        .visualization-wrapper .panel-section {
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .visualization-wrapper .panel-section:last-child {
+            border-bottom: none;
+        }
+
+        /* Control groups */
+        .control-group label {
+            color: #333 !important;
+        }
+
+        .control-group label span {
+            color: #3498db !important;
+        }
+
+        /* Canvas container and canvas with light background for network */
+        .canvas-container {
+            background: #fdfdfd !important;
+            border: 1px solid #e2e8f0;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        #networkCanvas {
+            background: #fdfdfd !important;
+        }
+
+        /* Stats overlay - adjust for light canvas */
+        .overlay-stats {
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid #e2e8f0;
+            backdrop-filter: blur(4px);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .stat-label {
+            color: #64748b;
+        }
+
+        .stat-value {
+            color: #3b82f6;
+        }
+
+        /* Control buttons overlay */
+        .overlay-controls {
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid #e2e8f0;
+            backdrop-filter: blur(4px);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Legend styling */
+        .legend {
+            background: #f8f9fa;
+            border: 1px solid #e0e0e0;
+        }
+
+        .legend h3 {
+            color: #1a1a1a;
+        }
+
+        .legend-item {
+            color: #333;
+        }
+
+        /* Range inputs */
+        input[type="range"] {
+            background: #e0e0e0;
+        }
+
+        /* Two column layout */
+        .two-column-layout {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        @media (max-width: 1024px) {
+            .two-column-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="essay-container">
+        <header class="essay-header">
+            <h1 class="essay-title">Influence Is Not Popularity</h1>
+            <p class="essay-subtitle">A Marketing Reading of Kempe, Kleinberg, and Tardos</p>
+        </header>
+
+        <section class="essay-section">
+            <div class="essay-text">
+                <p>At the height of the early-2000s obsession with viral marketing, Kempe, Kleinberg, and Tardos wrote a
+                    <a href="kdd03-inf.pdf" target="_blank">paper</a> that quietly dismantled one of marketing's most
+                    persistent myths: that the most influential
+                    people are simply the most connected ones. <em><a href="kdd03-inf.pdf" target="_blank">Maximizing
+                            the Spread of Influence through a Social
+                            Network</a></em> argues that influence is not about volume or visibility, but about
+                    <strong>reach
+                        without redundancy</strong>—about finding the people who expose a message to new audiences, not
+                    the same crowd over and over again.
+                </p>
+
+                <p>The paper frames influence as an optimization problem. Given a limited budget—say, free products,
+                    early access, or paid seeding—which small set of people should you target so that adoption spreads
+                    as widely as possible through a network? This question matters in marketing precisely because
+                    budgets are finite and audiences overlap. Two influencers with massive followings may look powerful
+                    individually, but if they reach the same audience, one of them is largely wasted spend.</p>
+            </div>
+        </section>
+
+        <section class="essay-section">
+            <h2 class="section-heading">Two Models of Influence Diffusion</h2>
+
+            <div class="essay-text">
+                <p>To study this, the authors use two classic diffusion models. In the <strong>Linear Threshold
+                        model</strong>, people adopt when enough of their peers have adopted, reflecting social pressure
+                    and conformity. In the <strong>Independent Cascade model</strong>, adoption spreads
+                    probabilistically, more like word-of-mouth sparks jumping from person to person. Despite their
+                    differences, both models reveal the same structural truth: influence grows with diminishing returns.
+                    Each additional seed contributes less than the last if it overlaps with people already reached.</p>
+            </div>
+
+            <div class="visualization-wrapper">
+                <div class="panel-section">
+                    <h3>Select a Diffusion Model</h3>
+                    <div class="model-selector">
+                        <button class="model-btn active" data-model="triggering">
+                            <div class="model-icon">🎯</div>
+                            <div class="model-name">Triggering Model</div>
+                            <div class="model-desc">Nodes activate via random triggering sets (live/blocked edges)</div>
+                        </button>
+                        <button class="model-btn" data-model="general-cascade">
+                            <div class="model-icon">🌊</div>
+                            <div class="model-name">General Cascade</div>
+                            <div class="model-desc">Order-independent probabilistic activation with incremental
+                                functions</div>
+                        </button>
+                        <button class="model-btn" data-model="general-threshold">
+                            <div class="model-icon">📊</div>
+                            <div class="model-name">General Threshold</div>
+                            <div class="model-desc">Monotone threshold functions over neighbor subsets</div>
+                        </button>
+                    </div>
+                </div>
+                <p class="viz-caption">Choose between different mathematical models of how influence spreads through
+                    networks. Each captures different mechanisms of social adoption.</p>
+            </div>
+        </section>
+
+        <section class="essay-section">
+            <h2 class="section-heading">The Power of Submodularity</h2>
+
+            <div class="essay-text">
+                <p>This property—called <strong>submodularity</strong>—turns out to be the key insight. It allows the
+                    authors to prove that a simple greedy strategy works remarkably well: select people one at a time,
+                    always choosing the next person who adds the most new reach. This strategy is guaranteed to achieve
+                    at least about 63% of the optimal possible spread, even though finding the true optimum is
+                    computationally infeasible. More importantly, this greedy approach naturally avoids the trap of
+                    over-investing in clustered, highly connected individuals.</p>
+            </div>
+
+            <div class="highlight-box">
+                <p>The greedy algorithm doesn't just perform well—it fundamentally changes how we think about influence.
+                    Instead of chasing celebrity, it seeks structural diversity.</p>
+            </div>
+        </section>
+
+        <section class="essay-section">
+            <h2 class="section-heading">Interactive Network Visualization</h2>
+
+            <div class="essay-text">
+                <p>Below, you can generate and explore social networks yourself. The visualization allows you to compare
+                    two seed selection strategies: the traditional approach of selecting the <strong>highest-degree
+                        nodes</strong> (the most connected people), versus the <strong>greedy algorithm</strong> that
+                    optimizes for maximum reach. Watch how influence propagates differently depending on which strategy
+                    you choose.</p>
+            </div>
+
+            <div class="two-column-layout">
+                <div class="canvas-container">
+                    <canvas id="networkCanvas"></canvas>
+                    <div class="overlay-stats">
+                        <div class="stat-item">
+                            <span class="stat-label">Active Nodes:</span>
+                            <span class="stat-value" id="activeCount">0</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Step:</span>
+                            <span class="stat-value" id="stepCount">0</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Influence:</span>
+                            <span class="stat-value" id="influencePercent">0%</span>
+                        </div>
+                    </div>
+                    <div class="overlay-controls">
+                        <button id="startBtn" class="control-btn" disabled>
+                            <span class="btn-icon">▶️</span>
+                            Start
+                        </button>
+                        <button id="stepBtn" class="control-btn" disabled>
+                            <span class="btn-icon">⏭️</span>
+                            Step
+                        </button>
+                        <button id="resetBtn" class="control-btn" disabled>
+                            <span class="btn-icon">⏹️</span>
+                            Reset
+                        </button>
+                    </div>
+                </div>
+
+                <div class="control-panel">
+                    <div class="panel-section">
+                        <h3>Network Configuration</h3>
+                        <div class="control-group">
+                            <label for="nodeCount">Number of Nodes: <span id="nodeCountValue">30</span></label>
+                            <input type="range" id="nodeCount" min="10" max="100" value="30" step="5">
+                        </div>
+                        <div class="control-group">
+                            <label for="connectivity">Network Density: <span id="connectivityValue">0.15</span></label>
+                            <input type="range" id="connectivity" min="0.05" max="0.4" value="0.15" step="0.05">
+                        </div>
+                        <div class="control-group">
+                            <label for="initialSeeds">Initial Seeds: <span id="initialSeedsValue">3</span></label>
+                            <input type="range" id="initialSeeds" min="1" max="10" value="3" step="1">
+                        </div>
+                    </div>
+
+                    <div class="panel-section">
+                        <h3>Model Parameters</h3>
+                        <div id="triggeringParams" class="params-container">
+                            <div class="control-group">
+                                <label for="liveEdgeProb">Live Edge Probability: <span
+                                        id="liveEdgeProbValue">0.5</span></label>
+                                <input type="range" id="liveEdgeProb" min="0.1" max="0.9" value="0.5" step="0.1">
+                            </div>
+                        </div>
+                        <div id="generalCascadeParams" class="params-container hidden">
+                            <div class="control-group">
+                                <label for="baseActivationProb">Base Activation Probability: <span
+                                        id="baseActivationProbValue">0.3</span></label>
+                                <input type="range" id="baseActivationProb" min="0.1" max="0.9" value="0.3" step="0.1">
+                            </div>
+                        </div>
+                        <div id="generalThresholdParams" class="params-container hidden">
+                            <div class="control-group">
+                                <label for="thresholdMean">Threshold Mean: <span
+                                        id="thresholdMeanValue">0.5</span></label>
+                                <input type="range" id="thresholdMean" min="0.1" max="0.9" value="0.5" step="0.1">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel-section legend">
+                        <h3>Legend</h3>
+                        <div class="legend-items">
+                            <div class="legend-item">
+                                <div class="legend-circle inactive"></div>
+                                <span>Inactive Node</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-circle active"></div>
+                                <span>Active Node</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-circle seed"></div>
+                                <span>Initial Seed</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-circle optimal-seed"></div>
+                                <span>Optimal Seed</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-line"></div>
+                                <span>Influence Edge</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="visualization-wrapper">
+                <div class="panel-section">
+                    <h3>Seed Selection Strategy</h3>
+                    <div class="control-group">
+                        <div style="display: flex; gap: 0.5rem; margin-top: 0.5rem;">
+                            <button id="heuristicBtn" class="secondary-btn" style="flex: 1; font-size: 0.8rem;">
+                                <span class="btn-icon">📊</span>
+                                Highest Degree
+                            </button>
+                            <button id="greedyBtn" class="secondary-btn" style="flex: 1; font-size: 0.8rem;">
+                                <span class="btn-icon">🎯</span>
+                                Greedy Algorithm
+                            </button>
+                        </div>
+                    </div>
+                    <div class="button-group" style="grid-template-columns: 1fr; margin-top: 1rem;">
+                        <button id="generateBtn" class="primary-btn">
+                            <span class="btn-icon">🔄</span>
+                            Generate Network
+                        </button>
+                    </div>
+                    <div class="control-group" style="margin-top: 1rem;">
+                        <label for="animationSpeed">Animation Speed: <span id="animationSpeedValue">1.0x</span></label>
+                        <input type="range" id="animationSpeed" min="0.5" max="3" value="1" step="0.5">
+                    </div>
+                </div>
+                <p class="viz-caption">Compare the <strong>Highest Degree</strong> heuristic (selecting the most
+                    connected nodes) with the <strong>Greedy Algorithm</strong> (optimizing for maximum incremental
+                    reach). Generate a network and observe how each strategy performs.</p>
+            </div>
+        </section>
+
+        <section class="essay-section">
+            <h2 class="section-heading">Why Traditional Heuristics Fail</h2>
+
+            <div class="essay-text">
+                <p>When tested on large real-world networks, this method consistently outperforms common marketing
+                    heuristics like targeting high-degree users or socially "central" figures. These traditional
+                    strategies fail because they confuse visibility with influence. Central people often sit inside
+                    dense clusters; targeting many of them just reinforces the same audience. The greedy approach, by
+                    contrast, actively seeks structural diversity—people who bridge communities, operate at network
+                    boundaries, or connect otherwise separate groups.</p>
+            </div>
+        </section>
+
+        <section class="essay-section">
+            <h2 class="section-heading">Implications for Modern Marketing</h2>
+
+            <div class="essay-text">
+                <p>For real-world marketing, the implications are direct and still highly relevant. Influencer
+                    marketing, referral programs, early-access launches, and even B2B sales seeding all face the same
+                    structural problem: audience overlap. The paper provides a theoretical foundation for why strategies
+                    that prioritize incremental reach—rather than raw follower counts—perform better. This logic shows
+                    up today in practices like lookalike modeling, frequency capping, creator portfolio diversification,
+                    and network-aware media planning, even when practitioners don't explicitly name the math behind it.
+                </p>
+
+                <p>Ultimately, the paper's message is almost anti-glamorous. Influence doesn't live at the center of the
+                    network, surrounded by noise and repetition. It lives in the margins—in connectors, bridges, and
+                    underappreciated nodes that carry messages into new territory. Good marketing, the paper suggests,
+                    is not about shouting louder, but about placing your voice where it hasn't been heard yet.</p>
+            </div>
+
+            <div class="highlight-box">
+                <p><strong>Key Takeaway:</strong> The most influential nodes in a network are not necessarily the most
+                    visible ones. Strategic influence maximization requires identifying bridges and connectors who can
+                    reach new audiences, not just amplifying messages to the same dense clusters.</p>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
