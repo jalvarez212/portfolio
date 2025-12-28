@@ -41,7 +41,7 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-652NYTLETF"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
 
     gtag('config', 'G-652NYTLETF');
@@ -469,10 +469,29 @@
             </a>
           </div>
         </div>
+
+        <div class="large-6 medium-6 columns">
+          <div class="post">
+            <a href="connectivity/index.html">
+              <div class="post-image-wrap">
+                <div class="post-image post-image-connectivity"></div>
+              </div>
+              <div class="post-desc">
+                <h2>Six Degrees of Separation</h2>
+                <p class="info-author">John C. Alvarez</p>
+              </div>
+            </a>
+          </div>
+        </div>
       </div>
       <style>
         .post-image-influence {
           background: url('images/@stock/influence_post.png') center center no-repeat;
+          background-size: cover;
+        }
+
+        .post-image-connectivity {
+          background: url('images/@stock/connectivity_post.png') center center no-repeat;
           background-size: cover;
         }
       </style>
